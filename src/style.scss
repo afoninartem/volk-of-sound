@@ -1,0 +1,173 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #8194a6;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mixer {
+  position: relative;
+  background-color: #323232;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+marquee {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 32px;
+  font-family: "VT323", monospace;
+  border-radius: 4px;
+  border: 2px solid silver;
+  background-color: #adff2f;
+  user-select: none;
+}
+
+/* BUTTONS START*/
+
+.button-wrapper {
+  display: inline-block;
+  position: relative;
+  // margin: 150px;
+  background: #252525;
+  border: 6px solid #252525;
+  border-bottom-color: #4b4b4b;
+  border-radius: 8px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    width: 6px;
+    background: linear-gradient(to bottom, #252525 70%, #4b4b4b 100%);
+    z-index: 1;
+  }
+  &::before {
+    left: -6px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  &::after {
+    right: -6px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .button {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #323232, #2d2d2d);
+    border: 2px solid rgba(white, 0.03);
+    border-bottom: 6px solid rgba(#252629, 0.8);
+    border-radius: 4px;
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 20px;
+    transition: all 0.25s;
+
+    .shadow-right,
+    .shadow-left {
+      position: absolute;
+      top: 0;
+      left: -8px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(50, 50, 50, 0) 15%,
+        rgba(#21c9ff, 0.4) 50%,
+        rgba(50, 50, 50, 0) 85%
+      );
+      opacity: 0;
+      transition: all 0.25s;
+    }
+    .shadow-right {
+      left: auto;
+      right: -8px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: all 0.25s;
+    }
+    &::before {
+      top: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        rgba(50, 50, 50, 0) 18%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(50, 50, 50, 0) 82%
+      );
+    }
+    &::after {
+      opacity: 0;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      height: 5px;
+      background: linear-gradient(
+        to right,
+        rgba(50, 50, 50, 0) 9%,
+        rgba(#21c9ff, 0.5) 50%,
+        rgba(50, 50, 50, 0) 91%
+      );
+    }
+    &:hover {
+      color: #21c9ff;
+      text-shadow: 0 0 5px #21c9ff;
+      box-shadow: none;
+      border-color: transparent;
+      background: #2d2d2d;
+      z-index: 3;
+
+      .shadow-right,
+      .shadow-left {
+        opacity: 1;
+      }
+      &::before {
+        top: -8px;
+        height: 6px;
+        background: linear-gradient(
+          to right,
+          rgba(50, 50, 50, 0) 9%,
+          rgba(#21c9ff, 0.5) 50%,
+          rgba(50, 50, 50, 0) 91%
+        );
+        opacity: 0.25;
+      }
+      &::after {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+/* BUTTONS END */
