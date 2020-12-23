@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #8194a6;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mixer {
+  position: relative;
+  background-color: #323232;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+marquee {
+  font-size: 32px;
+  font-family: "VT323", monospace;
+  border-radius: 4px;
+  border: 2px solid silver;
+  background-color: #adff2f;
+  user-select: none;
+}
+
