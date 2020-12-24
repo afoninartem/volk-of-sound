@@ -24,21 +24,14 @@ h2 {
   margin-bottom: 30px;
 }
 
-img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
-}
-
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .mixer {
-  position: relative;
+  position: fixed;
+  top: 0;
   background-color: #323232;
   width: 100%;
   display: -webkit-box;
@@ -52,7 +45,8 @@ img {
           justify-content: space-between;
   height: 70px;
   border-radius: 6px;
-  padding: 10px;
+  padding: 20px;
+  z-index: 5;
 }
 
 .logo {
@@ -229,10 +223,31 @@ marquee {
 /* BUTTONS END */
 /* INTRO START */
 .intro {
-  position: relative;
   z-index: -1;
   height: 100vh;
-  background: center/contain no-repeat url(../img/digital-mixer-recording-studio-close-up-min.jpg);
+  background: center/cover no-repeat url(../img/mixer-dark-min.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: silver;
+}
+
+.intro__title {
+  font-size: 8rem;
+}
+
+.intro__info {
+  font-size: 4rem;
 }
 
 /* INTRO END */
@@ -245,6 +260,21 @@ marquee {
   grid-gap: 32px;
 }
 
-#studio .studio__content img {
+#studio .studio__content .studio__photo {
   height: 330px;
+  width: 100%;
+  border-radius: 8px;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#studio .studio__content #photo-studio-1 {
+  background: center/cover url(../img/IMG-3400-min.JPG);
+}
+
+#studio .studio__content #photo-studio-2 {
+  background: center/cover url(../img/IMG-3406-min.JPG);
 }

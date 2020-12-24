@@ -24,13 +24,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
-}
 
 .wrapper {
   max-width: 1200px;
@@ -38,7 +31,8 @@ img {
 }
 
 .mixer {
-  position: relative;
+  position: fixed;
+  top: 0;
   background-color: #323232;
   width: 100%;
   display: flex;
@@ -46,7 +40,8 @@ img {
   justify-content: space-between;
   height: 70px;
   border-radius: 6px;
-  padding: 10px;
+  padding: 20px;
+  z-index: 5;
 }
 
 .logo {
@@ -223,10 +218,21 @@ marquee {
 /* INTRO START */
 
 .intro {
-  position: relative;
   z-index: -1;
   height: 100vh;
-  background: center / contain no-repeat url(../img/digital-mixer-recording-studio-close-up-min.jpg)
+  background: center / cover no-repeat
+    url(../img/mixer-dark-min.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: silver;
+  &__title {
+    font-size: 8rem;
+  }
+  &__info {
+    font-size: 4rem;
+  }
 }
 
 /* INTRO END */
@@ -238,8 +244,21 @@ marquee {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
-    img {
+    .studio__photo {
       height: 330px;
+      width: 100%;
+      border-radius: 8px;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+    }
+    #photo-studio-1 {
+      background: center / cover url(../img/IMG-3400-min.JPG);
+    }
+    #photo-studio-2 {
+      background: center / cover url(../img/IMG-3406-min.JPG);
     }
   }
 }
