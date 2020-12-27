@@ -11,13 +11,54 @@ html {
 }
 
 body {
-  background-color: #95a5a6;
+  background: #3f3c3c;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  color: #000;
+}
+
+.photo1 {
+  background: center/cover url(../img/IMG-3400-min.JPG);
+}
+
+.photo2 {
+  background: center/cover url(../img/IMG-3401-min.JPG);
+}
+
+.photo3 {
+  background: center/cover url(../img/IMG-3402-min.JPG);
+}
+
+.photo4 {
+  background: center/cover url(../img/IMG-3403-min.JPG);
+}
+
+.photo5 {
+  background: center/cover url(../img/IMG-3404-min.JPG);
+}
+
+.photo6 {
+  background: center/cover url(../img/IMG-3405-min.JPG);
+}
+
+.photo7 {
+  background: center/cover url(../img/IMG-3406-min.JPG);
+}
+
+.photo8 {
+  background: center/cover url(../img/IMG-3407-min.JPG);
+}
+
+.transition {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 h2 {
   font-family: "Merriweather Sans", sans-serif;
+  color: silver;
   font-size: 40px;
   text-align: center;
   margin-top: 50px;
@@ -25,7 +66,7 @@ h2 {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -277,4 +318,58 @@ marquee {
 
 #studio .studio__content #photo-studio-2 {
   background: center/cover url(../img/IMG-3406-min.JPG);
+}
+
+/* STUDIO END */
+/* GALLERY START */
+#gallery p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gallery .gallery__content .carousel-container {
+  position: relative;
+  width: 75%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#gallery .gallery__content .carousel-container #prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  font-size: 30px;
+  color: silver;
+  opacity: .7;
+}
+
+#gallery .gallery__content .carousel-container #prevBtn:hover {
+  opacity: 1;
+}
+
+#gallery .gallery__content .carousel-container #nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  font-size: 30px;
+  color: silver;
+  opacity: .7;
+}
+
+#gallery .gallery__content .carousel-container #nextBtn:hover {
+  opacity: 1;
+}
+
+#gallery .gallery__content .carousel-container .carousel-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 600px;
+}
+
+#gallery .gallery__content .carousel-container .carousel-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
