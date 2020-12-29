@@ -17,45 +17,6 @@ body {
   color: #000;
 }
 
-.photo1 {
-  background: center/cover url(../img/IMG-3400-min.JPG);
-}
-
-.photo2 {
-  background: center/cover url(../img/IMG-3401-min.JPG);
-}
-
-.photo3 {
-  background: center/cover url(../img/IMG-3402-min.JPG);
-}
-
-.photo4 {
-  background: center/cover url(../img/IMG-3403-min.JPG);
-}
-
-.photo5 {
-  background: center/cover url(../img/IMG-3404-min.JPG);
-}
-
-.photo6 {
-  background: center/cover url(../img/IMG-3405-min.JPG);
-}
-
-.photo7 {
-  background: center/cover url(../img/IMG-3406-min.JPG);
-}
-
-.photo8 {
-  background: center/cover url(../img/IMG-3407-min.JPG);
-}
-
-.transition {
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
-}
-
 h2 {
   font-family: "Merriweather Sans", sans-serif;
   color: silver;
@@ -68,6 +29,10 @@ h2 {
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.article-styles {
+  margin: 30px auto 20px auto;
 }
 
 .mixer {
@@ -304,7 +269,6 @@ marquee {
 #studio .studio__content .studio__photo {
   height: 330px;
   width: 100%;
-  border-radius: 8px;
   width: 100%;
   border-radius: 6px;
   box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
@@ -329,8 +293,12 @@ marquee {
 
 #gallery .gallery__content .carousel-container {
   position: relative;
-  width: 75%;
+  width: 80%;
   margin: auto;
+  border-radius: 6px;
+  box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
 
@@ -341,7 +309,7 @@ marquee {
   left: 5%;
   font-size: 30px;
   color: silver;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 #gallery .gallery__content .carousel-container #prevBtn:hover {
@@ -355,7 +323,7 @@ marquee {
   right: 5%;
   font-size: 30px;
   color: silver;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 #gallery .gallery__content .carousel-container #nextBtn:hover {
@@ -372,4 +340,48 @@ marquee {
 #gallery .gallery__content .carousel-container .carousel-slide img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* FOOTER START */
+#footer {
+  color: silver;
+  background-color: #323232;
+}
+
+#footer .footer__content .contacts {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer .footer__content .contacts .contacts-media .media-links {
+  color: silver;
+  font-size: 32px;
+}
+
+#footer .footer__content .contacts .contacts-media .media-links a {
+  outline: none;
+  text-decoration: none;
+  color: silver;
+}
+
+#footer .footer__content .contacts .contacts-media .media-links a:link {
+  color: silver;
+  outline: none;
+  text-decoration: none;
+}
+
+#footer .footer__content .contacts .contacts-media .media-links a:link:visited {
+  color: silver;
+  outline: none;
+  text-decoration: none;
+}
+
+.all-rights {
+  text-align: center;
+  padding: 20px;
 }
