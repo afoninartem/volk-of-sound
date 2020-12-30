@@ -55,11 +55,20 @@ h2 {
   z-index: 5;
 }
 
-.logo {
-  margin-left: 10px;
+.mixer .logo-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-marquee {
+.mixer .logo-group .logo {
+  margin: 0 10px;
+}
+
+.mixer .logo-group marquee {
   font-size: 32px;
   font-family: "VT323", monospace;
   border-radius: 4px;
@@ -110,6 +119,42 @@ marquee {
   right: -6px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+.button-wrapper #orderBtn {
+  color: rgba(185, 32, 32, 0.712);
+}
+
+.button-wrapper #orderBtn:hover {
+  color: #f70909;
+}
+
+.button-wrapper .active-order-btn {
+  color: #f70909;
+  text-shadow: 0 0 5px #f70909;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: transparent;
+  background: #2d2d2d;
+  z-index: 3;
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 40px;
+  line-height: 35px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 6px solid rgba(37, 38, 41, 0.8);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 20px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.button-wrapper .active-order-btn:hover {
+  color: #f70909;
 }
 
 .button-wrapper .button {
@@ -250,6 +295,7 @@ marquee {
 
 .intro__title {
   font-size: 8rem;
+  margin-bottom: 50px;
 }
 
 .intro__info {
@@ -308,8 +354,7 @@ marquee {
   z-index: 10;
   left: 5%;
   font-size: 30px;
-  color: silver;
-  opacity: 0.7;
+  color: #000;
 }
 
 #gallery .gallery__content .carousel-container #prevBtn:hover {
@@ -322,8 +367,7 @@ marquee {
   z-index: 10;
   right: 5%;
   font-size: 30px;
-  color: silver;
-  opacity: 0.7;
+  color: #000;
 }
 
 #gallery .gallery__content .carousel-container #nextBtn:hover {
@@ -342,13 +386,31 @@ marquee {
      object-fit: cover;
 }
 
+/*ORDER POPUP START*/
+#orderPopUp {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  height: calc(100% - 70px);
+  width: 100%;
+  background: #323232;
+}
+
+/*ORDER POPUP END*/
 /* FOOTER START */
-#footer {
+footer#footer {
   color: silver;
   background-color: #323232;
 }
 
-#footer .footer__content .contacts {
+footer#footer .footer__content {
+  width: 70%;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+}
+
+footer#footer .footer__content .contacts {
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,27 +420,55 @@ marquee {
           justify-content: space-between;
 }
 
-#footer .footer__content .contacts .contacts-media .media-links {
-  color: silver;
-  font-size: 32px;
+footer#footer .footer__content .contacts .contacts__media h3 {
+  margin-bottom: 20px;
 }
 
-#footer .footer__content .contacts .contacts-media .media-links a {
-  outline: none;
-  text-decoration: none;
+footer#footer .footer__content .contacts .contacts__media .media-links {
   color: silver;
 }
 
-#footer .footer__content .contacts .contacts-media .media-links a:link {
+footer#footer .footer__content .contacts .contacts__media .media-links a {
   color: silver;
-  outline: none;
   text-decoration: none;
+  margin-right: 10px;
 }
 
-#footer .footer__content .contacts .contacts-media .media-links a:link:visited {
+footer#footer .footer__content .contacts .contacts__media .media-links a:last-child {
+  margin-right: 0;
+}
+
+footer#footer .footer__content .contacts .contacts__media .media-links a:visited {
   color: silver;
-  outline: none;
-  text-decoration: none;
+}
+
+footer#footer .footer__content .contacts .contacts__media .media-links a i:hover {
+  color: black;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+footer#footer .footer__content .contacts .contacts__other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer#footer .footer__content .contacts .contacts__other div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+footer#footer .footer__content .contacts .contacts__other div i {
+  margin-right: 15px;
 }
 
 .all-rights {

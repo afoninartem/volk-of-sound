@@ -1,4 +1,15 @@
 // mixer console scripts start:
+
+//mixer order start
+const orderBtn = document.querySelector("#orderBtn");
+orderBtn.addEventListener("click", () => {
+  orderBtn.classList.toggle("active-order-btn");
+  orderBtn.classList.toggle("button");
+});
+
+//mixer order end
+
+//mixer nav start
 const navButtons = document.querySelectorAll(".nav-btn");
 navButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -13,6 +24,7 @@ navButtons.forEach((btn) => {
       : (btn.classList.add("active-btn"), btn.classList.remove("button"));
   });
 });
+//mixer nav end
 
 //mixer console scripts end
 
